@@ -1,0 +1,44 @@
+\documentclass[preprint,11pt]{elsarticle} % Main formatting of the paper
+
+% Page Layout and Formatting
+\usepackage[margin=2.5cm]{geometry} % Set page margins
+\usepackage{lineno} % For line numbers in the document
+\usepackage{titlesec} % Control section title formatting
+% Referencing and Hyperlinks
+\usepackage{hyperref} % Create hyperlinks in the document (for references, citations, tables, etc.)
+
+% Mathematics and Theorem Environments
+\usepackage{amsmath} % Provides enhanced math typesetting (equations, symbols)
+\usepackage{amsfonts} % Additional fonts for math (e.g., Blackboard bold, Fraktur)
+\usepackage{amsthm} % For defining theorem-like environments (theorems, propositions, definitions)
+\newtheorem{definition}{Definition} % Define the environment for definitions
+\newtheorem{proposition}{Proposition} % Define the environment for propositions
+
+% Figures and Tables
+\usepackage{graphicx} % Insert images and figures
+\usepackage{subcaption} % Create subfigures under a single figure environment
+\usepackage{wrapfig} % Allows text to wrap around figures
+\usepackage{float} % Control figure and table placement (for [H] option)
+\usepackage{slashbox} % Create diagonal slash tables (used for splitting cells)
+
+\bibliographystyle{ieeetr}  % Specifies the IEEE Transactions reference style
+
+% Custom commands
+\input{Components/custom-commands} % Include file for custom LaTeX commands
+
+%%%%%%%%%%%%%%%%---Main Document Starts---%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{Components/Title}
+\input{Components/section-introduction.tex}
+\input{Components/Background}
+\input{Components/Sub-team-coordination}
+\input{Components/Multi-Agent}
+\input{Components/Emperical-Results}
+\input{Components/conclusion-and-future-work}
+
+\bibliography{References/mybibfile}
+
+\end{document}

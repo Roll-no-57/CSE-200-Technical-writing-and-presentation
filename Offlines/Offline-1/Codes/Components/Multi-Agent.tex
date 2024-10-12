@@ -1,0 +1,24 @@
+\section{\textbf{Multiagent Q-learning with Sub-team Coordination}}
+    In this section, we introduce the specific architecture of QSCAN, a value factorization framework that leverages sub-team coordination patterns while adhering to the IGM condition. We begin by outlining the base architecture, which utilizes duplex dueling structures \cite{r10} to ensure the IGM condition is satisfied. Following this, we delve into the critical component of QSCAN—the sub-team coordination module—that defines the team's organization and coordination patterns. Several function classes can be derived from the QSCAN framework. Finally, we explore the coordination module in detail and present two practical architectures for QSCAN.
+
+    \textbf{Sub-team Coordination and QSCAN Framework}
+    We analyze the design of the theoretical coordination module which characterizes coordination patterns within \emph{k}-member sub-teams and then propose the \large{QSCAN} framework .Intuitively, the team reward can be creadited to each sub-team and then to each individual . Consider a sub-team $ST$ containing \emph{k} agents and $a_{ST}$ is $ST$'s joint action . The contribution of $ST$ can be assigned to each member \emph{i} with an importance weight $g_{i}^{ST}$ evaluating \emph{i}'s contribution in $ ST$.
+
+    % \begin{align}
+    %     A_{tot}(\textbf{\tau}, \textbf{a}) 
+    %     & \approx \sum_{ST:ST \subseteq\mathcal{N},|ST|=k} \left[ \sum_{i \in ST} \left( g_i^{ST}(\tau, a_{ST}) \cdot A_i(\tau, a_i) \right) \right]\nonumber\\
+    %     & = \sum_{i=1}^{n} \left( \sum_{ST: i \in ST \subseteq\mathcal{N}, |ST| = k} g_i^{ST}(\tau, a_{ST}) \right) A_i(\tau, a_i).\nonumber\\
+    % \end{align}
+    % Based on this factorization, ,we propose \large{$QSCAN_{\emph{k}}$}
+
+    \begin{align}
+        A_{tot}(\mathbf{\tau}, \mathbf{a})
+        & \approx \sum_{\mathbf{ST} : \mathbf{ST} \subseteq \mathcal{N}, |\mathbf{ST}| = k}
+        \left( \sum_{i \in \mathbf{ST}} \left( g_i^{\mathbf{ST}}(\mathbf{\tau}, \mathbf{a}_{\mathbf{ST}})
+        \cdot A_i(\mathbf{\tau}, \mathbf{a}_i) \right) \right) \nonumber \\
+        & = \sum_{i=1}^{n} \left( \sum_{\mathbf{ST} : i \in \mathbf{ST}
+        \subseteq \mathcal{N}, |\mathbf{ST}| = k} g_i^{\mathbf{ST}}(\mathbf{\tau}, \mathbf{a}_{\mathbf{ST}})
+        \right) A_i(\mathbf{\tau}, \mathbf{a}_i). \nonumber
+    \end{align}
+
+    Based on this factorization, ,we propose \large{$QSCAN_{\emph{k}}$}

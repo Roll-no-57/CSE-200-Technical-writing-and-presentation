@@ -1,0 +1,20 @@
+
+\section{Conclusions and Future Work}
+
+We propose QSCAN, a novel value-based multiagent reinforcement learning framework that can
+characterize coordination patterns within sub-teams hierarchically and guarantee the IGM condition. QSCAN provides value factorization architectures with an expressive mixing network for the
+centralized end-to-end training and learns a series of individual action-value functions for decentralized execution. We establish a coordination hierarchy based on QSCAN after analyzing the
+sub-team factorization, and present two efficient implementations based on pairwise coordination
+and self-attention mechanisms. Empirically, we show that our methods achieve better or comparable
+performance with baselines in several benchmarks.
+
+While our value-based architecture employs the duplex dueling structure for the sub-team factorization,
+we believe that the sub-team factorization benefits other architectures, e.g., policy-based methods
+like COMA \cite{r5}. As our discussion about sub-teams in Sec.~\ref{sec:Sub-TeamCoordination Patterns}, designing more effective hierarchical
+structures for sub-team organization beyond the factorization on advantages, remains a challenge.
+From theoretical side, it remains a problem about whether a general coordination hierarchy exists
+according to the sub-team factorization $\frac{\partial Q_{tot}}{\partial Q_{ST}} \geq 0$ when sub-team size $k \geq \frac{n}{2}$. One more thing,
+there has not been a universal organizational paradigm suitable for most tasks \cite{r9,r3}. Besides the
+sub-team organization, exploring other organizational paradigms in cooperative MARL is promising.
+In the future, we will continue exploring organizational paradigms in large multiagent systems.
+    

@@ -1,0 +1,57 @@
+
+\begin{frontmatter}
+
+\title{
+\hrule height 2.5pt
+\vskip 15pt
+\textbf{Multiagent Q-learning with Sub-Team
+Coordination}
+\vskip 10pt
+\hrule height .8pt
+}
+
+% \title{Multiagent Q-learning with Sub-Team}
+
+\author[1]{Wenhan Huang\corref{cor1}}
+\author[2]{Kai Li}
+\author[2]{Kun Shao}
+\author[3]{Tianze Zhou}
+\author[4,5]{Matthew E. Taylor}
+\author[2]{Jun Luo}
+\author[6]{Dongge Wang}
+\author[2]{Hangyu Mao}
+\author[2,7]{Jianye Hao}
+\author[8]{Jun Wang}
+\author[9]{Xiaotie Deng\corref{cor2}}
+
+\cortext[cor1]{This work was done when Wenhan Huang was an intern at Huawei Noah’s Ark Lab.}
+\cortext[cor2]{Corresponding author}
+
+\address[1]{Shanghai Jiao Tong University}
+\address[2]{Huawei Noah's Ark Lab}
+\address[3]{Beijing Institute of Technology}
+\address[4]{University of Alberta}
+\address[5]{Alberta Machine Intelligence Institute (Amii)}
+\address[6]{EPFL}
+\address[7]{Tianjin University}
+\address[8]{University College London}
+\address[9]{Peking University}
+
+\ead{rowdark@sjtu.edu.cn}
+\ead{likai210@huawei.com}
+\ead{shaokun2@huawei.com}
+\ead{jun.luo1@huawei.com}
+\ead{maohangyu1@huawei.com}
+\ead{simsimizt@126.com}
+\ead{matthew.e.taylor@ualberta.ca}
+\ead{dongge.wang@epfl.ch}
+\ead{jianye.hao@tju.edu.cn}
+\ead{jun.wang@cs.ucl.ac.uk}
+\ead{xiaotie@pku.edu.cn}
+
+
+\begin{abstract}
+In many real-world cooperative multiagent reinforcement learning (MARL) tasks, teams of agents can rehearse together before deployment, but then communication constraints may force individual agents to execute independently when deployed. Centralized training and decentralized execution (CTDE) is increasingly popular in recent years, focusing mainly on this setting. In the value-based MARL branch, credit assignment mechanism is typically used to factorize the team reward into each individual’s reward — individual-global-max (IGM) is a condition on the factorization ensuring that agents’ called \emph{multiagent Q-learning with sub-team coordination }(QSCAN), to flexibly represent sub-team coordination while honoring the IGM condition. QSCAN encompasses the full spectrum of sub-team coordination according to sub-team size, ranging from the monotonic value function class to the entire IGM function class, with familiar methods such as QMIX and QPLEX located at the respective extremes of the spectrum. Experimental results show that QSCAN’s performance dominates state-of-the-art methods in matrix games, predator-prey tasks, the Switch challenge in MA-Gym. Additionally, QSCAN achieves comparable performance to those methods on the StarCraft multiagent benchmark.
+\end{abstract}
+
+\end{frontmatter}
